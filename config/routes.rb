@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :comments
   resources :posts
+  resources :users
   # resources :users
   get "/", to: "users#show"
   post "/login", to: "users#login"
