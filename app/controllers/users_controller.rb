@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    before_action :authenticate, only: [:show, :update]
 
     def login 
         user = User.first
@@ -11,8 +12,8 @@ class UsersController < ApplicationController
     end 
 
     def show
-        @user = User.first
-        render json: @user
+        user = User.first
+        render json: user
     end 
 
     def create 
