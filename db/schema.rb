@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2021_04_16_185200) do
   create_table "posts", force: :cascade do |t|
     t.string "photo"
     t.string "caption"
-    t.integer "likes"
+    t.integer "likes", default: 0
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

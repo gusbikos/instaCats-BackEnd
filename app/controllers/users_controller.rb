@@ -2,7 +2,8 @@ class UsersController < ApplicationController
     before_action :authenticate, only: [:show, :update, :delete]
 
     def login 
-        user = User.find_by(id: params[:id])
+        # byebug
+        user = User.find_by(username: params[:username])
         render json: user
     end
 

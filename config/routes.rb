@@ -8,5 +8,9 @@ Rails.application.routes.draw do
   patch "/profile", to: "users#update"
   post "/users", to: "users#create"
   delete "/users/:id", to: "users#destroy"
+
+  post "/posts", to: "posts#create"
+  get "/profile/:id", to: "posts#show" 
+  # get "/login/:id", to: "users#login"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
