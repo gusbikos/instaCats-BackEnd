@@ -2,7 +2,7 @@ class UsersController < ApplicationController
     before_action :authenticate, only: [:show, :update, :delete]
 
     def login 
-        user = User.find(params[:id])
+        user = User.find_by(id: params[:id])
         render json: user
     end
 
@@ -12,22 +12,24 @@ class UsersController < ApplicationController
     end 
 
     def show
-        user = User.find_by(params[:id])
+        # byebug
+        user = User.find_by(id: params[:id])
         render json: user
     end 
 
     def create 
         @user = User.create(user_params)
+        render json: @user
     end 
 
     def update
-        @user = User.find_by(params[:id])
+        @user = User.find_by(id: params[:id])
         @user.update(user_params)
         render json: @user 
     end 
 
     def destroy
-        @user = User.find_by(params[:id])
+        @user = User.find_by(id: params[:id])
         @user.destroy
         render json: @user
     end 

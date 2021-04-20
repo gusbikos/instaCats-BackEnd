@@ -18,8 +18,8 @@ Comment.reset_pk_sequence
 User.create(name: "Brutus", username: "Broodus", bio: "Orange Boy", image: "", password: "123")
 User.create(name: "George", username: "Curious George", bio: "Rubberband Man", image: "", password: "abc")
 
-Post.create(photo: "", caption: "My favorite toy!!!", likes: 0, user_id: 1)
-Post.create(photo: "", caption: "Snack time", likes: 0, user_id: 1)
+Post.create(photo: "https://tbivision.com/files/2019/08/Garfield-.jpg", caption: "My favorite toy!!!", likes: 0, user_id: 1)
+Post.create(photo: "https://files.slack.com/files-pri/T02MD9XTF-F01V8J69SGZ/bananacat.jpg", caption: "Snack time", likes: 0, user_id: 1)
 Post.create(photo: "", caption: "I love watching the birds", likes: 0, user_id: 2)
 Post.create(photo: "", caption: "Scratching post", likes: 0, user_id: 2)
 

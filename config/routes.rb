@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :users
 
-  get "/profile", to: "users#show"
+  get "/profile/:id", to: "users#show"
   post "/login", to: "users#login"
   patch "/profile", to: "users#update"
   post "/users", to: "users#create"
