@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   post "/posts", to: "posts#create"
   get "/profile/:id", to: "posts#show" 
+  patch "/posts", to: "posts#update"
+  delete "/posts/:id", to: "posts#destroy"
   # get "/login/:id", to: "users#login"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
