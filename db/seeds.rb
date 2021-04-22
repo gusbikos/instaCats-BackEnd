@@ -4,8 +4,20 @@ User.destroy_all
 
 
 
-User.create(name: "Brutus", username: "Broodus", bio: "Orange Boy", password: "123")
-User.create(name: "George", username: "Curious George", bio: "Rubberband Man", password: "abc")
+brutus = User.create(name: "Brutus", username: "Broodus", bio: "Orange Boy", password: "123")
+george = User.create(name: "George", username: "Curious George", bio: "Rubberband Man", password: "abc")
+
+brutus.image.attach(
+    io: File.open('./public/images/bananacat.jpg'),
+    filename: 'bananacat.jpg',
+    content_type: 'application/jpg'
+)
+
+george.image.attach(
+    io: File.open('./public/images/bananacat.jpg'),
+    filename: 'bananacat.jpg',
+    content_type: 'application/jpg'
+)
 
 Post.create(caption: "My favorite toy!!!", likes: 0, user_id: 1)
 Post.create(caption: "Snack time", likes: 0, user_id: 1)
