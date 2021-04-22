@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   resources :posts
   resources :users
 
-  get "/profile/:id", to: "users#show"
+  # get "/login", to: "/users#login"
   post "/login", to: "users#login"
+  get "/profile/:id", to: "users#show"
   patch "/profile", to: "users#update"
   post "/users", to: "users#create"
   delete "/users/:id", to: "users#destroy"
@@ -14,6 +15,6 @@ Rails.application.routes.draw do
   patch "/posts", to: "posts#update"
   delete "/posts/:id", to: "posts#destroy"
   patch "posts/:id", to: "posts#update"
-  # get "/login/:id", to: "users#login"
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
