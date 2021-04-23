@@ -23,5 +23,8 @@ Post.create(photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/14
 Post.create(photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Tiger-2.jpg/640px-Tiger-2.jpg", caption: "My cousin", likes: 60, user_id:2)
 Post.create(photo: "https://i.redd.it/vn48q55ev4i31.jpg", caption: "Selfie Time", likes: 100, user_id:1)
 
+#Comment Seed Data
+###SEEds
+
 
 puts "😸😸😸😸😸😸😸😸😸😸😸😸😸😸😸😸😸😸😸😸😸😸"
